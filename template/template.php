@@ -51,10 +51,8 @@
 <article>
     <h2><?php page_title(); ?></h2>
     <?php page_content();?>
-    <script>
-    var button = document.createElement("button");
-    button.innerHTML = "getComic";
-    </script>
+    <button type="button" onclick="myFunction()">Get Comic</button>
+
 </article>
 
     <!-- Optional JavaScript -->
