@@ -58,18 +58,39 @@ function page_title()
 function page_content()
 {
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-    $path = getcwd() . '/' . config('content_path') . '/' . $page . '.phtml';
+    $path = getcwd() . '/' . config('content_path') . '/' . $page . '.php';
     if (! file_exists($path)) {
-        $path = getcwd() . '/' . config('content_path') . '/404.phtml';
+        $path = getcwd() . '/' . config('content_path') . '/404.php';
     }
-    echo file_get_contents($path);
+    require config('content_path'). '/' . $page . '.php';
 }
+function getComic(){
+    $url = "https://xkcd.com/info.0.json";
+    /**dont change
+    */
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt_array($handle,
+    array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true
+    )
+    );
+    $output = curl_exec($handle);
+    $response = json_decode($output, true);
+    curl_close($handle);
+    echo $response[title].'<br>';
+    echo '<img src=" '.$response['img'].' " alt="test"/>';
+    /*dont change
+    */
+    }
 
 /**
  * Starts everything and displays the template.
  */
- function init()
- {
-     require config('template_path') . '/template.php';
- }
+function init()
+{
+    require config('template_path') . '/template.php';
+}
+
 ?>

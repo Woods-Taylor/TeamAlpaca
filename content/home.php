@@ -1,0 +1,3 @@
+<article>
+<?php getComic(); ?>
+</article>

@@ -8,19 +8,17 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Simple PHP Website',
+        'name' => 'XKCD Pictures',
         'pretty_uri' => false,
-        'site_url' => 'https://team-alpha-web-site.herokuapp.com/',
+        'site_url' => 'https://serversidephp.herokuapp.com/',
         'nav_menu' => [
             '' => 'Home',
-            'hello-world' => 'Hello World',
-            'Menu' => 'Menu',
-            'search' => 'Search',
-            'results' => 'Results'
+            'random' => 'Random Comic',
+            'random' => 'Image Gallery'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
-        'version' => 'v3.0',
+        'version' => 'v1.0',
     ];
     return isset($config[$key]) ? $config[$key] : null;
 }
