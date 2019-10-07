@@ -10,10 +10,10 @@ function config($key = '')
     $config = [
         'name' => 'XKCD Pictures',
         'pretty_uri' => false,
-        'site_url' => 'https://serversidephp.herokuapp.com/',
+        'site_url' => 'https://team-alpaca.herokuapp.com/',
         'nav_menu' => [
-            '' => 'Home',
-            'random' => 'Random Comic',
+            '' => 'comicfetch',
+            'random' => 'random',
             'comicfetch' => 'Newest Comic'
         ],
         'template_path' => 'template',

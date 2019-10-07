@@ -15,6 +15,7 @@
 <h2>Click the button for a random XKCD comic</h2>
 
 </p>
+<?php pageContent();?>
 <?php getComic();?>
 
 </body>
