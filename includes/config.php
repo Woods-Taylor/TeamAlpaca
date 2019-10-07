@@ -13,7 +13,7 @@ function config($key = '')
         'site_url' => 'https://team-alpaca.herokuapp.com/',
         'nav_menu' => [
             '' => 'comicfetch',
-            'random' => 'random',
+            'randomcomic' => 'randomcomic',
             'comicfetch' => 'Newest Comic'
         ],
         'template_path' => 'template',
