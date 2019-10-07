@@ -51,7 +51,8 @@
 <article>
     <h2><?php page_title(); ?></h2>
     <?php page_content();?>
-    <button type="button" onclick="myFunction()">Get Comic</button>
+    <button type="button" onclick="getComic()">Get Comic</button>
+
 
 </article>
 
