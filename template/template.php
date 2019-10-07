@@ -23,7 +23,7 @@
         <a class="nav-link" href="content/home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://server-side-assignment2.herokuapp.com/content/random.php">random</a>
+        <a class="nav-link" href="content/randcomic">random</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
