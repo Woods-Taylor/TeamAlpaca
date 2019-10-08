@@ -32,9 +32,10 @@ function nav_menu($sep = ' | ')
     $nav_menu = '';
     $nav_items = config('nav_menu');
     foreach ($nav_items as $uri => $name) {
+        $list_header = '<li class="nav-item active">'
         $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? ' active' : '';
         $url = config('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
-        $nav_menu .= '<li class=\n"nav-item active">' '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
+        $nav_menu .= '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
     }
     echo trim($nav_menu, $sep);
 }
