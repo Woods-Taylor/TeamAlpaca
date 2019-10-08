@@ -35,7 +35,7 @@ function nav_menu($sep = ' | ')
         $list_header = '<li class="nav-item active">';
         $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? ' active' : '';
         $url = config('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
-        $nav_menu .= '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
+        $nav_menu .= $list_header . '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep . </li>;
     }
     echo trim($nav_menu, $sep);
 }
