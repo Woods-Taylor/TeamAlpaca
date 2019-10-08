@@ -62,7 +62,7 @@ function page_content()
     if (! file_exists($path)) {
         $path = getcwd() . '/' . config('content_path') . '/404.php';
     }
-    require config('template_path'). '/' . template '.php';
+    require config('template_path'). '/' . 'template' '.php';
     require config('content_path'). '/' . $page . '.php';
 }
 function getComic(){
